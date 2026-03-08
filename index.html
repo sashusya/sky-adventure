@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sky Adventure</title>
+    <style>
+        /* Основной стиль страницы */
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(#2a2a72, #009ffd);
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* по вертикали */
+            align-items: center;    /* по горизонтали */
+            color: white;
+            font-family: Arial, sans-serif;
+            position: relative; /* чтобы нижний GIF был абсолютно снизу */
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            z-index: 1;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background: #ff4b8b;
+            color: white;
+            cursor: pointer;
+            z-index: 1;
+            position: relative;
+            box-shadow:0 0 10px white;
+transition:0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        #demo {
+            margin-top: 20px;
+            font-size: 1.5em;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Нижний GIF — статичный, растянут по ширине экрана */
+       .bottom-gif img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(75%);
+}
+
+
+}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Центральный контент -->
+    <h1>✦ Sky Adventure ✦</h1>
+    <button onclick="start()">Start Game</button>
+    <p id="demo"></p>
+
+    <!-- Нижний GIF -->
+    <div class="bottom-gif">
+        <img src="images/gifg.gif" alt="Anime Character">
+    </div>
+
+    <script>
+        function start() {
+            document.getElementById("demo").innerHTML = "🚀 Game launching soon!";
+        }
+    </script>
+
+</body>
+</html>
